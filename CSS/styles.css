@@ -1,0 +1,103 @@
+/*VARIABLES*/
+:root {
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --pr-color: rgb (0, 0, 255); /*primary color*/
+
+}
+
+/*PONERLO SIEMPRE*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none; /*quitar el subrayado*/
+}
+
+body {
+    background-color: var(--pr-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--pr-color);
+    color: var(--bg-color); /*texto*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header a {
+    color: var(--bg-color);
+}
+
+main {
+    padding: 40px;
+    margin-top: 40px;
+}
+
+main p {
+    margin-top: 20px;
+}
+
+/*Menu desktop*/
+.menu-desktop { /*class*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-desktop > li > a {
+    font-size: 10px;
+}
+
+.menu-desktop > li > a:hover {
+
+}
+
+/*Menu mobile*/
+.nav-mobile {
+    width: 100%;
+    height: 100%; /*cuanto ocupa en la pantalla*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*background-color: var(--pr-color);*/
+    /* z-index: 9999; */
+
+    overflow: hidden;
+    max-height: 0;
+}
+
+.menu-mobile {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu-mobile > li > a {
+    font-size: 40px;
+}
+
+/* Menu icons */
+.hamb {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.side-menu {
+    display: none;
+}
+
+.hamb > .fa-xmark  {
+    display: none;
+}
