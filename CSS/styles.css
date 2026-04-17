@@ -18,12 +18,18 @@ a{
     text-decoration: none; /*quitar el subrayado*/
 }
 
+ul {
+    list-style: none;
+}
+
 body {
     background-color: var(--pr-color);
     color: var(--text-color);
 }
 
 header {
+    position: sticky;
+    top: 0;
     background-color: var(--pr-color);
     color: var(--bg-color); /*texto*/
     display: flex;
@@ -68,11 +74,12 @@ main p {
     position: fixed;
     top: 0;
     left: 0;
-    /*background-color: var(--pr-color);*/
-    /* z-index: 9999; */
+    background-color: var(--pr-color);
+    z-index: 9999; 
 
     overflow: hidden;
     max-height: 0;
+    transition: max-height 0.5s;
 }
 
 .menu-mobile {
@@ -90,6 +97,7 @@ main p {
 
 /* Menu icons */
 .hamb {
+    display: none;
     cursor: pointer;
     font-size: 20px;
 }
@@ -100,4 +108,34 @@ main p {
 
 .hamb > .fa-xmark  {
     display: none;
+}
+
+/* Mostramos el mençu movil cuando se hace click en el icono */
+/* Toggle : inteructor de la luz */
+
+/* Selecciona .nav.mobile cuando el checkbox tiene el estado checked */
+.side-menu:checked ~ .nav-mobile {
+    max-height: 100%;
+
+}
+
+.side-menu:checked ~.hamb > .fa-bars {
+    display: none;
+}
+
+.side-menu:checked ~.hamb > .fa-bars {
+    display: block;
+}
+
+@media screen and(max-width: 720px) {
+   
+   /*esconder menu hamburguesa*/
+    .nav-desktop {
+        display: none;
+    }
+
+    /*aparece menu hamburguesa*/
+    .hamb {
+        display: block;
+    }
 }

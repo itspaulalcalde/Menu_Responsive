@@ -21,3 +21,7 @@ Las variables se declaran con el nimbre que decidamos (que tenga sentido) preced
 
 Para llamar luego a esa variable usaremos la función 
 var(--nombre-de-variable)
+
+
+## Para escribir ~
+MacOs -> Opt+ñ
